@@ -15,10 +15,10 @@ $(function () {
   // past, present, and future classes? How can Day.js be used to get the
   // current hour in 24-hour time?
   var timeblockEl = $('.time-block');
-  currentHour = dayjs().format('H');
-  currentHour = parseInt(currentHour);
+  currentHour24 = dayjs().format('H');
+  currentHour = parseInt(currentHour24);
   currentHour12 = dayjs().format('hA')
-  console.log(`The current hour is ${currentHour} in 24hr or ${currentHour12} in 12hr time formats`);
+  console.log(`The current hour is ${currentHour12} in 12hr or ${currentHour24} in 24hr time formats`);
 
   $.each(timeblockEl, function () {
     var timeblockID = $(this).attr('id');
