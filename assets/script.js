@@ -8,7 +8,14 @@ $(function () {
   // function? How can DOM traversal be used to get the "hour-x" id of the
   // time-block containing the button that was clicked? How might the id be
   // useful when saving the description in local storage?
-  //
+  $('.saveBtn').on('click', function() {
+    var hourID = $(this).parent().attr('id');
+    var userInput = $(this).parent().children().eq(1).val();
+    localStorage.setItem(hourID, userInput)
+    
+    console.log(hourID, userInput)
+  })
+
   // TODO: Add code to apply the past, present, or future class to each time
   // block by comparing the id to the current hour. HINTS: How can the id
   // attribute of each time-block be used to conditionally add or remove the
@@ -25,19 +32,20 @@ $(function () {
     var timeblockHour = timeblockID.slice(5);
     // console.log(timeblockHour);
 
+  // removeClass not needed?
   if (timeblockHour < currentHour) {
     $(this).addClass('past');
-    $(this).removeClass('present');
-    $(this).removeClass('future');
+    // $(this).removeClass('present');
+    // $(this).removeClass('future');
   } else if (timeblockHour == currentHour) {
-    $(this).removeClass('past');
+    // $(this).removeClass('past');
     $(this).addClass('present');
-    $(this).removeClass('future');
+    // $(this).removeClass('future');
   } else {
-    $(this).removeClass('past');
-    $(this).removeClass('present');
+    // $(this).removeClass('past');
+    // $(this).removeClass('present');
     $(this).addClass('future');
-  }})
+  }});
 
   // TODO: Add code to get any user input that was saved in localStorage and set
   // the values of the corresponding textarea elements. HINT: How can the id
