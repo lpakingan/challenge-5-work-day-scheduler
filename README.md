@@ -30,7 +30,7 @@ User input was stored locally by creating a storage item containing the hour ID 
 
 The functionality of the scheduler is shown below:
 
-![]()
+![](https://github.com/lpakingan/challenge-5-work-day-scheduler/blob/main/assets/demos/scheduler_demo.gif)
 
 ## Resources Used
 - W3Schools
