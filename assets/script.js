@@ -2,10 +2,10 @@
 $(function () {
 
   // uses dayjs to find the current date/time and writes it to the scheduler page
-  $('#currentDay').text(dayjs().format('[Today is ] dddd, MMMM DD[th.]'));
+  $('#currentDay').text(dayjs().format('[Today is ] dddd, MMMM D, YYYY.'));
 
   function currentTime() {
-    var time = dayjs().format('[The time right now is] hh:mm:ss a[.]');
+    var time = dayjs().format('[The time right now is] hh:mm:ss a.');
     $('#currentTime').text(time);
   }
 
