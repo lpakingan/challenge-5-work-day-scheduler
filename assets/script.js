@@ -28,17 +28,11 @@ $(function () {
   // if the timeblock hour is less than the current hour, adds the class 'past'
   if (timeblockHour < currentHour) {
     $(this).addClass('past');
-    // $(this).removeClass('present');
-    // $(this).removeClass('future');
     //if the timeblock hour is equal to the current hour, adds the class 'present'
   } else if (timeblockHour == currentHour) {
-    // $(this).removeClass('past');
     $(this).addClass('present');
-    // $(this).removeClass('future');
     // if the timeblock hour is greater than the current hour, adds the class 'future'
   } else {
-    // $(this).removeClass('past');
-    // $(this).removeClass('present');
     $(this).addClass('future');
   }});
 
