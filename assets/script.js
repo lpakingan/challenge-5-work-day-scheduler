@@ -45,6 +45,7 @@ $(function () {
       alert('You must enter valid input!');
       console.log(hourID, userInput);
     } else {
+      alert('Input saved successfully!')
       localStorage.setItem(hourID, userInput);
       console.log(hourID, userInput)};
   })
